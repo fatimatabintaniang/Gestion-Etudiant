@@ -1,0 +1,115 @@
+{
+    "Etudiants": [
+      {
+        "id": 1,
+        "nom": "Benzo",
+        "prenom": "Morales",
+        "email": "benzo020@gmail.com",
+        "password": "liverpool040",
+        "telephone": "775467805",
+        "age": 24,
+        "id_classe": 1,
+        "avatar": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSs7Uizu_xxD8mriRmLZqieAUH_U1mIQr3smw&s"
+      },
+      {
+        "id": 2,
+        "nom": "Dupont",
+        "prenom": "Jean",
+        "email": "dupont020@gmail.com",
+        "password": "password123",
+        "telephone": "123456789",
+        "age": 20,
+        "id_classe": 1,
+        "avatar": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTh4B5rxKwG5ce-sS1UBdkx586i9lIevtbiCg&s"
+      },
+      {
+        "id": 3,
+        "nom": "Martin",
+        "prenom": "Claire",
+        "email": "martin020@gmail.com",
+        "password": "12345abc",
+        "telephone": "987654321",
+        "age": 22,
+        "id_classe": 2,
+        "avatar": "https://koreus.cdn.li/media/201401/74-insolite-22.jpg"
+      }
+    ],
+    "Professeurs": [
+      {
+        "id": 1,
+        "nom": "Dubois",
+        "prenom": "Marie",
+        "email": "dubois@gmail.com",
+        "password": "teacher123",
+        "telephone": "567891234",
+        "id_classes": [1, 2]
+      },
+      {
+        "id": 2,
+        "nom": "Lemoine",
+        "prenom": "Paul",
+        "email": "paulLemoine@gmail.com",
+        "password": "mathteach456",
+        "telephone": "678901234",
+        "id_classes": [2, 3]
+      }
+    ],
+    "Classes": [
+      {
+        "id": 1,
+        "libelle": "Informatique",
+        "cours": [
+          "Algorithmique",
+          "Développement Web",
+          "Base de Données"
+        ]
+      },
+      {
+        "id": 2,
+        "libelle": "Mathématiques",
+        "cours": [
+          "Algèbre",
+          "Analyse",
+          "Statistiques"
+        ]
+      },
+      {
+        "id": 3,
+        "libelle": "Sciences",
+        "cours": [
+          "Physique",
+          "Chimie",
+          "Biologie"
+        ]
+      },
+      {
+        "id": 4,
+        "libelle": "Espaces",
+        "cours": [
+          "Architecture",
+          "Design 3D",
+          "Urbanisme"
+        ]
+      },
+      {
+        "id": 5,
+        "libelle": "Data Scientist",
+        "cours": [
+          "Machine Learning",
+          "Big Data",
+          "Python Avancé"
+        ]
+      }
+    ],
+    "Administrateurs": [
+      {
+        "id": 1,
+        "nom": "Admin",
+        "prenom": "System",
+        "email": "admin020@gmail.com",
+        "password": "admin123",
+        "telephone": "123123123"
+      }
+    ]
+  }
+  

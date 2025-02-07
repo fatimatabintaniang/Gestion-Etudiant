@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Étudiant - Tableau de bord</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/remixicon@4.6.0/fonts/remixicon.min.css">
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+
+<body class="bg-gray-100 min-h-screen">
+    <nav class="bg-blue-600 text-white p-4 flex justify-between items-center fixed top-0 w-full">
+        <h1 class="text-2xl font-bold">Tableau de Bord Administrateur</h1>
+        <button id="logout" class="bg-red-500 px-4 py-2 rounded-lg hover:bg-red-700">Déconnexion</button>
+    </nav>
+
+    <!-- Formulaire de modification  -->
+<div id="editForm" class="bg-white p-6 shadow-lg rounded-lg hidden w-[50%] mx-auto mt-6">
+    <h2 class="text-xl font-semibold">Modifier l'étudiant</h2>
+    <form id="formEdit">
+       <div class="grid grid-cols-2 gap-5">
+        <div class="mb-4 ">
+            <label for="editNom" class="block text-sm font-medium text-gray-700">Nom</label>
+            <input type="text" id="editNom" class="w-full p-2 border rounded-lg" required />
+        </div>
+        <div class="mb-4 ">
+            <label for="editPrenom" class="block text-sm font-medium text-gray-700">Prénom</label>
+            <input type="text" id="editPrenom" class="w-full p-2 border rounded-lg" required />
+        </div>
+        <div class="mb-4">
+            <label for="editEmail" class="block text-sm font-medium text-gray-700">Email</label>
+            <input type="email" id="editEmail" class="w-full p-2 border rounded-lg" required />
+        </div>
+        <div class="mb-4">
+            <label for="editTelephone" class="block text-sm font-medium text-gray-700">Téléphone</label>
+            <input type="text" id="editTelephone" class="w-full p-2 border rounded-lg" required />
+        </div>
+       </div>
+       <div class="grid"><button type="submit" class="bg-blue-500 px-4 py-2 rounded-lg hover:bg-blue-700">Modifier</button>
+       </div>
+    </form>
+</div>
+
+
+    <div class="container mx-auto mt-6 p-4">
+        <div class="bg-white p-6 shadow-lg rounded-lg">
+            <h2 class="text-xl font-semibold">Bienvenue <span id="AdminName" class="text-blue-600"></span></h2>
+            <div class="overflow-x-auto mt-4">
+                <table class="min-w-full bg-white border border-gray-300">
+                    <thead>
+                        <tr class="bg-blue-500 text-white">
+                            <th class="py-2 px-4 border">Nom</th>
+                            <th class="py-2 px-4 border">Prenom</th>
+                            <th class="py-2 px-4 border">Email</th>
+                            <th class="py-2 px-4 border">Telephone</th>
+                            <th class="py-2 px-4 border">Action</th>
+                        </tr>
+                    </thead>
+                    <tbody id="Container"></tbody>
+                </table>
+                <div class="flex justify-end mt-4">
+                    <a href="./ajout.html">
+                        <button class="bg-blue-500 px-4 py-2 rounded-lg hover:bg-blue-700" id="ajout">Ajouter</button>
+                    </a>
+                 </div>
+            </div>
+        </div>
+        <script src="./admin.js"></script>
+        <!-- <script src="./modif.js"></script> -->
+
+</body>
+
+</html>

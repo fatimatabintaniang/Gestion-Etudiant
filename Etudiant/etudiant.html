@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Étudiant - Tableau de bord</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-gray-100 min-h-screen">
+    <nav class="bg-blue-600 text-white p-4 flex justify-between items-center">
+        <h1 class="text-2xl font-bold">Tableau de Bord Étudiant</h1>
+        <button id="logout" class="bg-red-500 px-4 py-2 rounded-lg hover:bg-red-700">Déconnexion</button>
+    </nav>
+    
+    <div class="container mx-auto mt-6 p-4">
+        <div class="bg-white p-6 shadow-lg rounded-lg">
+            <h2 class="text-xl font-semibold">Bienvenue, <span id="EtudiantName" class="text-blue-600"></span></h2>
+            <p class="text-gray-600">Voici vos cours :</p>
+            <div class="overflow-x-auto mt-4">
+                <table class="min-w-full bg-white border border-gray-300">
+                    <thead>
+                        <tr class="bg-blue-500 text-white">
+                            <th class="py-2 px-4 border">Cours</th>
+                        </tr>
+                    </thead>
+                    <tbody id="coursesContainer"></tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", async () => {
+            let user = JSON.parse(localStorage.getItem("user"));
+            if (!user) {
+                window.location.href = "../connexion.html";
+                return;
+            }
+
+            document.getElementById("EtudiantName").textContent = user.prenom + " " + user.nom;
+            
+            let response = await fetch("../data.json");
+            let data = await response.json();
+            let studentClass = data.Classes.find(cls => cls.id === user.id_classe);
+            
+            let coursesContainer = document.getElementById("coursesContainer");
+            studentClass.cours.forEach(cours => {
+                let row = document.createElement("tr");
+                row.innerHTML = `<td class='py-2 px-4 border text-center'>${cours}</td>`;
+                coursesContainer.appendChild(row);
+            });
+        });
+
+        document.getElementById("logout").addEventListener("click", () => {
+            localStorage.removeItem("user");
+            window.location.href = "../connexion.html";
+        });
+    </script>
+</body>
+</html>
