@@ -57,7 +57,7 @@
     "Classes": [
       {
         "id": 1,
-        "libelle": "Informatique",
+        "niveau": "L2dev",
         "cours": [
           "Algorithmique",
           "Développement Web",
@@ -66,7 +66,7 @@
       },
       {
         "id": 2,
-        "libelle": "Mathématiques",
+        "niveau": "L3 marketing",
         "cours": [
           "Algèbre",
           "Analyse",
@@ -75,7 +75,7 @@
       },
       {
         "id": 3,
-        "libelle": "Sciences",
+        "niveau": "L1 marketing",
         "cours": [
           "Physique",
           "Chimie",
@@ -84,7 +84,7 @@
       },
       {
         "id": 4,
-        "libelle": "Espaces",
+        "niveau": "L1 design",
         "cours": [
           "Architecture",
           "Design 3D",
@@ -93,7 +93,7 @@
       },
       {
         "id": 5,
-        "libelle": "Data Scientist",
+        "niveau": "L2 Dev",
         "cours": [
           "Machine Learning",
           "Big Data",

@@ -33,7 +33,7 @@ document.getElementById("loginForm").addEventListener("submit", async function (
 
         let user = null;
 
-        // Vérifier si l'utilisateur est un étudiant
+        //cherche le premier élément du tableau qui correspond à la condition donnée.
         user = data.Etudiants.find(u => u.email === email && u.password === password);
         if (user) {
             localStorage.setItem('user', JSON.stringify(user));
@@ -62,3 +62,4 @@ document.getElementById("loginForm").addEventListener("submit", async function (
         console.error("Erreur lors du chargement des données :", error);
     }
 });
+
